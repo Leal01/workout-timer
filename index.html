@@ -11,18 +11,19 @@
    <body onload="initClock()">
       <div class="outer-container">
          <div class="container">
+            <div class="container-clock" id="clock"></div>
             <div class="container-settings">
-               <div class="settings-content">
+               <div class="input-titles">
                   <h2>Exercise time</h2>
                   <input type="number" id="exercise-time" class="exercise-setting" placeholder="Seconds">
+               </div>
+               <div class="">
                   <h2>Break time</h2>
                   <input type="number" id="break-time" class="break-setting" placeholder="Seconds">
-                  <div class="settings-button">
-                     <button onclick="getInput()">Start</button>
-                  </div>
                </div>
             </div>
-            <div class="container-clock" id="clock">
+            <div class="settings-button">
+               <button onclick="getInput()">Start</button>
             </div>
          </div>
       </div>

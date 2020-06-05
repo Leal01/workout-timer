@@ -1,5 +1,5 @@
 function initClock() {
-   document.getElementById("clock").innerHTML = "00"
+   document.getElementById("clock").innerHTML = "00:00"
 }
 
 function getInput() {
@@ -11,15 +11,14 @@ function getInput() {
 
    if (exerciseTime.length == 0 || breakTime.length == 0)
       alert("Please set times correctly")
-   else
+   else 
       configClock(exerciseTime, breakTime)
+
 }
 
 async function configClock(exerciseTime, breakTime) {
-   exerciseAux = exerciseTime
-   breakAux = breakTime
-   await startClock(exerciseAux)  
-   await startClock(breakAux)
+   await startClock(exerciseTime)  
+   await startClock(breakTime)
    configClock(exerciseTime, breakTime)
 }
 
