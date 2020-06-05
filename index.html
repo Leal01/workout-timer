@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <title> Exercise Clock</title>
+      <link rel="stylesheet" href="style.css">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+      <script src="index.js"></script>
+   </head>
+
+   <body onload="initClock()">
+      <div class="outer-container">
+         <div class="container">
+            <div class="container-settings">
+               <div class="settings-content">
+                  <h2>Exercise time</h2>
+                  <input type="number" id="exercise-time" class="exercise-setting" placeholder="Seconds">
+                  <h2>Break time</h2>
+                  <input type="number" id="break-time" class="break-setting" placeholder="Seconds">
+                  <div class="settings-button">
+                     <button onclick="getInput()">Start</button>
+                  </div>
+               </div>
+            </div>
+            <div class="container-clock" id="clock">
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
