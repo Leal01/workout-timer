@@ -18,25 +18,29 @@ function getInput() {
 async function configClock(exerciseTime, breakTime) {
    exerciseAux = exerciseTime
    breakAux = breakTime
-   await startExercise(exerciseAux)
-   console.log("te amo")
+   await startClock(exerciseAux)  
+   await startClock(breakAux)
+   configClock(exerciseTime, breakTime)
 }
 
-function startExercise(time) {
-   if (time > 0) {
-      document.getElementById("clock").innerHTML = time
-      setInterval(decrementTime(time), 1000)
-   }
-   else clearInterval()
+function startClock(time) {
+   return new Promise(resolve => {
+      let clock = setInterval(() => {
+         if (time == 0) {
+            clearInterval(clock)
+            resolve(0)
+         }
+
+         document.getElementById('clock').innerHTML = time
+         time = time - 1
+      }, 1000)
+   })
 }
 
-function startBreak(time) {
-   
-}
 
-function decrementTime(time) {
-   time = time - 1
-}
+
+
+
 
 
 
