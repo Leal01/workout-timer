@@ -8,23 +8,31 @@
       <script src="index.js"></script>
    </head>
 
-   <body onload="initClock()">
-      <div class="outer-container">
-         <div class="container">
-            <div class="container-clock" id="clock"></div>
-            <div class="container-settings">
-               <div class="input-titles">
-                  <h2>Exercise time</h2>
-                  <input type="number" id="exercise-time" class="exercise-setting" placeholder="Seconds">
-               </div>
-               <div class="">
-                  <h2>Break time</h2>
-                  <input type="number" id="break-time" class="break-setting" placeholder="Seconds">
-               </div>
+   <body class="outer-container" onload="initClock()">
+      <div class="container">
+         <div class="top-container">
+            <div class="container-clock">
+               <div class="clock-background" id="clock"></div>
             </div>
-            <div class="settings-button">
-               <button onclick="getInput()">Start</button>
+            <div class="info-container">
+               <h4>Time past: </h4>
+               <span id="total-time">0</span>
+               <h4>Workout time: </h4>
+               <span id="workout-time">0</span>
             </div>
+         </div>
+         <div class="container-settings">
+            <div>
+               <h2>Exercise time</h2>
+               <input type="number" id="exercise-time" class="exercise-setting" placeholder="Seconds">
+            </div>
+            <div>
+               <h2>Break time</h2>
+               <input type="number" id="break-time" class="break-setting" placeholder="Seconds">
+            </div>
+         </div>
+         <div class="settings-button">
+            <button onclick="getInput()">Start</button>
          </div>
       </div>
    </body>

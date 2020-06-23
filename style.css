@@ -1,8 +1,13 @@
+@font-face {
+   font-family: sevenSegment;
+   src: url(assets/sevenSegment.ttf);
+}
+
 * {
    margin: 0;
    padding: 0;
    box-sizing: border-box;
-   font-family: 'Roboto', sans-serif;
+   
 }
 
 .outer-container {
@@ -15,28 +20,81 @@
 }
 
 .container {
-   width: 60%;
-   height: 600px;
-   background-color: #f8f9fc;
+   display: flex;
+   flex-direction: column;
+   width: 50%;
+   height: 650px;
+   background-color: #EFF1F3;
    border-radius: 5px;
    box-shadow: 0 4px 4px rgba(0,0,0, 0.25);
+   font-family: 'Roboto', sans-serif;
+}
+
+.container .top-container {
+   display: flex;
+   align-items: center;
+   width: 100%;
+   height: 60%;
+}
+
+.container .container-clock {
+   width: 60%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   font-size: 100px;
+   color: #C1292E;
+   font-family: sevenSegment, 'Roboto', sans-serif;
+}
+
+.container .container-clock .clock-background {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 350px;
+   height: 350px;
+   border: 2px solid #885053;
+   border-radius: 100%;
+
+}
+
+.container .top-container .info-container {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   width: 40%;
+   height: 100%;
+}
+
+.container .top-container .info-container h4 {
+   font-size: 28px;
+   font-weight: normal;
+   margin: 15px;
+}
+
+.container .top-container .info-container span {
+   font-size: 28px;
+   width: 50%;
+   margin: 0 auto 20px auto;
 }
 
 .container .container-settings {
    display: flex;
-   width: 100%;
    justify-content: space-around;
+   width: 100%;
+   height: 20%;
    align-items: center;
 }
-
 
 .container .container-settings  h2 {
    font-weight: normal;
    margin: 12px 0;
 }
 
-.container .container-settings  input {
-   padding: 6px;
+.container .container-settings input {
+   padding: 10px;
 }
 
 .container .settings-button {
@@ -46,29 +104,21 @@
 }
 
 .container  button {
-   width: 15%;
+   width: 8%;
    border: none;
-   background-color: #00CED1;
-   color: #454545;
+   background-color: #272727;
+   color: #fff;
    font-size: 16px;
    padding: 10px;
    border-radius: 5px;
    cursor: pointer;
    transition: 0.2s filter;
+   margin-bottom: 50px;
 }
 
 .container  button:hover {
    filter: brightness(90%);
 }
 
-.container .container-clock {
-   width: 100%;
-   height: 60%;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-   font-size: 128px;
-   color: #303030;
-}
+
 
